@@ -12,3 +12,17 @@ def repeat(word, num_of_times=2)
   #internet helped with this one
   num_of_times.times.map { word + '' }.join(' ')
 end
+
+def start_of_word(word, pos)
+  word.slice(pos - pos, pos)
+end
+
+def first_word(phrase)
+  phrase.split.first
+end
+
+def titleize(words)
+  if words.length > 3
+    words.split.map(&:capitalize).join(' ')
+  end
+end
